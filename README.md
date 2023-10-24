@@ -14,22 +14,22 @@
 <br>Two-week sprint, ending in a deliverable MVP.
 
 **MVP Features**
-1. User Authentication
-Login: Authenticate existing customers with username and password.
-Account Creation: Allow new customers to create an account with a username and password.
+1. **User Authentication**
+**Login**: Authenticate existing customers with username and password.
+**Account Creation**: Allow new customers to create an account with a username and password.
 
-2. Account Management
-Deposit Money: Customers can add funds to their account.
-Withdraw Money: Customers can withdraw funds from their account.
-Transfer Funds: Customers can transfer funds between accounts.
+2. **Account Management**
+**Deposit Money**: Customers can add funds to their account.
+**Withdraw Money**: Customers can withdraw funds from their account.
+**Transfer Funds**: Customers can transfer funds between accounts.
 
-3. Transaction History
-Recent Transactions: Customers can view the 5 most recent transactions.
+3. **Transaction History**
+**Recent Transactions**: Customers can view the 5 most recent transactions.
 
-4. User Information
-Display Information: Show relevant customer and account information.
-5. Sign Out
-Logout: Customers can securely log out of their accounts.
+4. **User Information**
+**Display Information**: Show relevant customer and account information.
+5. **Sign Out**
+**Logout**: Customers can securely log out of their accounts.
 
 **<br>Non-Functional Requirements**
 <br>Error Handling: Basic error messages for login and deposit/withdrawal actions.
