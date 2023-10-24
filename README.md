@@ -2,7 +2,7 @@
 ## Project Overview
 **<br>Objective**
 <br>Create a Java console application to enable Dollars Bank customers to manage their accounts securely and efficiently.
-**Stakeholders**
+<br>**Stakeholders**
 <br>Bank customers
 <br>Development team
 <br>Project manager
