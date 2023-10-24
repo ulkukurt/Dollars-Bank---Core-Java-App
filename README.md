@@ -31,12 +31,12 @@ Display Information: Show relevant customer and account information.
 5. Sign Out
 Logout: Customers can securely log out of their accounts.
 
-Non-Functional Requirements
+**<br>Non-Functional Requirements**
 Error Handling: Basic error messages for login and deposit/withdrawal actions.
 Colored Text: Use simple colored text in the console for better readability.
 Data Storage: Store customer data within a simple text file.
 
-Technical Architecture
+**Technical Architecture**
 DollarsBankApplication: Main entry point.
 DollarsBankController: Handles the main business logic.
 Account: Model for bank accounts.
@@ -46,11 +46,10 @@ ConsolePrinterUtility: Helper for text formatting.
 FileStorageUtility: Helper for file operations.
 
 
-Future Enhancements
+**Future Enhancements**
 Implement two-factor authentication.
 Add joint accounts functionality.
 Provide an option for account statements to be emailed.
-Feel free to upload this PRD to your GitHub account as part of your project proposal. Adjustments can be made based on feedback from stakeholders or unforeseen technical challenges. Good luck with your sprint! 🚀
 
 
 
