@@ -1,4 +1,4 @@
-# Dollars Bank-Core Java App#
+# Dollars Bank-Core Java App
 
 ## Project Overview
 
