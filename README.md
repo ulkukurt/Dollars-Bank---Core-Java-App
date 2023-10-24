@@ -1,6 +1,6 @@
 # Dollars-Bank---Core-Java-App
 
-**Project Overview**
+*Project Overview*
 
 **<br>Objective**
 <br>Create a Java console application to enable Dollars Bank customers to manage their accounts securely and efficiently.
