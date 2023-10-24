@@ -32,24 +32,24 @@ Display Information: Show relevant customer and account information.
 Logout: Customers can securely log out of their accounts.
 
 **<br>Non-Functional Requirements**
-Error Handling: Basic error messages for login and deposit/withdrawal actions.
-Colored Text: Use simple colored text in the console for better readability.
-Data Storage: Store customer data within a simple text file.
+<br>Error Handling: Basic error messages for login and deposit/withdrawal actions.
+<br>Colored Text: Use simple colored text in the console for better readability.
+<br>Data Storage: Store customer data within a simple text file.
 
 **Technical Architecture**
-DollarsBankApplication: Main entry point.
-DollarsBankController: Handles the main business logic.
-Account: Model for bank accounts.
-Customer: Model for customers.
-ColorsUtility: Helper for colored text.
-ConsolePrinterUtility: Helper for text formatting.
-FileStorageUtility: Helper for file operations.
+<br>DollarsBankApplication: Main entry point.
+<br>DollarsBankController: Handles the main business logic.
+<br>Account: Model for bank accounts.
+<br>Customer: Model for customers.
+<br>ColorsUtility: Helper for colored text.
+<br>ConsolePrinterUtility: Helper for text formatting.
+<br>FileStorageUtility: Helper for file operations.
 
 
 **Future Enhancements**
-Implement two-factor authentication.
-Add joint accounts functionality.
-Provide an option for account statements to be emailed.
+<br>Implement two-factor authentication.
+<br>Add joint accounts functionality.
+<br>Provide an option for account statements to be emailed.
 
 
 
