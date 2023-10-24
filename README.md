@@ -46,7 +46,6 @@
 <br>**ConsolePrinterUtility**: Helper for text formatting.
 <br>**FileStorageUtility**: Helper for file operations.
 
-
 ## Future Enhancements
 <br>Implement two-factor authentication.
 <br>Add joint accounts functionality.
