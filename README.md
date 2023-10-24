@@ -31,12 +31,12 @@
 5. **Sign Out**
 **Logout**: Customers can securely log out of their accounts.
 
-**<br>Non-Functional Requirements**
+## <br>Non-Functional Requirements
 <br>Error Handling: Basic error messages for login and deposit/withdrawal actions.
 <br>Colored Text: Use simple colored text in the console for better readability.
 <br>Data Storage: Store customer data within a simple text file.
 
-**Technical Architecture**
+## Technical Architecture
 <br>DollarsBankApplication: Main entry point.
 <br>DollarsBankController: Handles the main business logic.
 <br>Account: Model for bank accounts.
@@ -46,7 +46,7 @@
 <br>FileStorageUtility: Helper for file operations.
 
 
-**Future Enhancements**
+## Future Enhancements
 <br>Implement two-factor authentication.
 <br>Add joint accounts functionality.
 <br>Provide an option for account statements to be emailed.
