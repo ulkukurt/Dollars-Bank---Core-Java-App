@@ -5,15 +5,15 @@
 **<br>Objective**
 <br>Create a Java console application to enable Dollars Bank customers to manage their accounts securely and efficiently.
 
-Stakeholders
-Bank customers
-Development team
-Project manager
+**Stakeholders**
+<br>Bank customers
+<br>Development team
+<br>Project manager
 
-Timeline
-Two-week sprint, ending in a deliverable MVP.
+**Timeline**
+<br>Two-week sprint, ending in a deliverable MVP.
 
-MVP Features
+**MVP Features**
 1. User Authentication
 Login: Authenticate existing customers with username and password.
 Account Creation: Allow new customers to create an account with a username and password.
