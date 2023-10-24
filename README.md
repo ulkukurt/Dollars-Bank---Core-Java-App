@@ -15,21 +15,21 @@
 
 ## MVP Features
 1. **User Authentication**
-**Login**: Authenticate existing customers with username and password.
-**Account Creation**: Allow new customers to create an account with a username and password.
+<br>**Login**: Authenticate existing customers with username and password.
+<br>**Account Creation**: Allow new customers to create an account with a username and password.
 
 2. **Account Management**
-**Deposit Money**: Customers can add funds to their account.
-**Withdraw Money**: Customers can withdraw funds from their account.
-**Transfer Funds**: Customers can transfer funds between accounts.
+<br>**Deposit Money**: Customers can add funds to their account.
+<br>**Withdraw Money**: Customers can withdraw funds from their account.
+<br>**Transfer Funds**: Customers can transfer funds between accounts.
 
 3. **Transaction History**
-**Recent Transactions**: Customers can view the 5 most recent transactions.
+<br>**Recent Transactions**: Customers can view the 5 most recent transactions.
 
 4. **User Information**
-**Display Information**: Show relevant customer and account information.
+<br>**Display Information**: Show relevant customer and account information.
 5. **Sign Out**
-**Logout**: Customers can securely log out of their accounts.
+<br>**Logout**: Customers can securely log out of their accounts.
 
 ## <br>Non-Functional Requirements
 <br>Error Handling: Basic error messages for login and deposit/withdrawal actions.
