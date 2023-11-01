@@ -1,11 +1,26 @@
 package com.dollarsbank.model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Account {
+public class Account implements Serializable {
     private String accountId;
     private double balance;
     private List<String> transactionHistory;
+
+    // Default constructor
+    public Account() {
+        this.transactionHistory = new ArrayList<>();
+    }
+
+    // Overloaded constructor
+    public Account(String accountId, double initialBalance) {
+        this.accountId = accountId;
+        this.balance = initialBalance;
+        this.transactionHistory = new ArrayList<>();
+        this.transactionHistory.add("Initial deposit: $" + initialBalance);
+    }
 
     public String getAccountId() {
         return accountId;
@@ -31,5 +46,10 @@ public class Account {
         this.transactionHistory = transactionHistory;
     }
 
-    // Getters and Setters will go here
+    public void addTransaction(String transactionDetail) {
+        if (transactionHistory == null) {
+            transactionHistory = new ArrayList<>();
+        }
+        transactionHistory.add(transactionDetail);
+    }
 }

@@ -1,6 +1,9 @@
 package com.dollarsbank.model;
 
-public class Customer {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Customer implements Serializable {
     private String username;
     private String password;
     private Account account;
@@ -28,5 +31,19 @@ public class Customer {
     public void setAccount(Account account) {
         this.account = account;
     }
-}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(username, customer.username) &&
+                Objects.equals(password, customer.password) &&
+                Objects.equals(account, customer.account);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username, password, account);
+    }
+}
