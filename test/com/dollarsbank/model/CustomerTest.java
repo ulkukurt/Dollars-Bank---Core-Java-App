@@ -1,13 +1,12 @@
-package com.dollarsbank.model;
-
+package com.dollarsbank.test;
 
 import com.dollarsbank.model.Customer;
 import com.dollarsbank.model.Account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,23 +22,26 @@ public class CustomerTest {
         account.setBalance(1000.00);
         account.setTransactionHistory(new ArrayList<>());
 
-        customer = new Customer();
+        customer = new Customer("defaultUser", "defaultPass", account); // using the constructor here
     }
 
     // 1. Initialization Tests
     @Test
     public void testCustomerInitializationWithAttributes() {
-        customer.setUsername("testUser");
-        customer.setPassword("testPass123");
-        customer.setAccount(account);
-
-        assertEquals("testUser", customer.getUsername(), "Username does not match expected value.");
-        assertEquals("testPass123", customer.getPassword(), "Password does not match expected value.");
+        assertEquals("defaultUser", customer.getUsername(), "Username does not match expected value.");
+        assertEquals("defaultPass", customer.getPassword(), "Password does not match expected value.");
         assertEquals(account, customer.getAccount(), "Account object does not match expected value.");
     }
 
-    // 2. Method Tests
+    // Constructor Tests
+    @Test
+    public void testConstructorWithUsernameAndAccount() {
+        Customer testCustomer = new Customer("userOnly", account);
+        assertEquals("userOnly", testCustomer.getUsername());
+        assertEquals(account, testCustomer.getAccount());
+    }
 
+    // 2. Method Tests
     @Test
     public void testChangePassword() {
         customer.setPassword("newPassword123");
@@ -48,7 +50,6 @@ public class CustomerTest {
 
     @Test
     public void testGetAccountDetails() {
-        customer.setAccount(account);
         Account retrievedAccount = customer.getAccount();
         assertNotNull(retrievedAccount, "Account should not be null.");
         assertEquals(account.getAccountId(), retrievedAccount.getAccountId(), "Account ID retrieved does not match the expected account ID.");
@@ -56,10 +57,8 @@ public class CustomerTest {
     }
 
     // 3. Integration with Account Class
-
     @Test
     public void testRetrieveAssociatedAccount() {
-        customer.setAccount(account);
         Account associatedAccount = customer.getAccount();
         assertNotNull(associatedAccount, "Account associated with customer should not be null.");
         assertEquals(account, associatedAccount, "Account associated with customer does not match the expected account.");

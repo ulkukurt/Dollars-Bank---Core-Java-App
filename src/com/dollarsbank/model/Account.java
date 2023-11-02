@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Account implements Serializable {
     private String accountId;
-    private double balance;
+    private Double balance; // Using the Double wrapper class for added type safety
     private List<String> transactionHistory;
 
     // Default constructor
@@ -51,5 +51,10 @@ public class Account implements Serializable {
             transactionHistory = new ArrayList<>();
         }
         transactionHistory.add(transactionDetail);
+    }
+
+    @Override
+    public String toString() {
+        return "Account [accountId=" + accountId + ", balance=" + balance + "]";
     }
 }

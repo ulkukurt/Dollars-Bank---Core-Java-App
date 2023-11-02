@@ -1,10 +1,12 @@
-package com.dollarsbank.model;
+package com.dollarsbank.test.model;
 
 import com.dollarsbank.model.Account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AccountTest {
 
@@ -12,40 +14,56 @@ public class AccountTest {
 
     @BeforeEach
     public void setUp() {
-        account = new Account("A12345", 1000.0); // Create an account with initial balance of $1000
+        account = new Account("A001", 1000.0);
     }
 
     @Test
-    public void testInitialBalance() {
-        assertEquals(1000.0, account.getBalance(), 0.001);
+    public void testGetAccountId() {
+        assertEquals("A001", account.getAccountId(), "Account ID should match the constructor value");
     }
 
     @Test
-    public void testDeposit() {
-        account.setBalance(account.getBalance() + 500.0); // Deposit $500
-        assertEquals(1500.0, account.getBalance(), 0.001);
+    public void testSetAccountId() {
+        account.setAccountId("A002");
+        assertEquals("A002", account.getAccountId(), "Account ID should be updated to A002");
     }
 
     @Test
-    public void testWithdrawal() {
-        account.setBalance(account.getBalance() - 300.0); // Withdraw $300
-        assertEquals(700.0, account.getBalance(), 0.001);
+    public void testGetBalance() {
+        assertEquals(1000.0, account.getBalance(), "Balance should match the constructor value");
     }
 
     @Test
-    public void testTransactionHistory() {
-        account.addTransaction("Deposited: $500");
-        account.addTransaction("Withdrew: $300");
-
-        assertEquals(3, account.getTransactionHistory().size());
-        assertEquals("Initial deposit: $1000.0", account.getTransactionHistory().get(0));
-        assertEquals("Deposited: $500", account.getTransactionHistory().get(1));
-        assertEquals("Withdrew: $300", account.getTransactionHistory().get(2));
+    public void testSetBalance() {
+        account.setBalance(2000.0);
+        assertEquals(2000.0, account.getBalance(), "Balance should be updated to 2000.0");
     }
 
     @Test
-    public void testAccountId() {
-        account.setAccountId("A67890");
-        assertEquals("A67890", account.getAccountId());
+    public void testGetTransactionHistory() {
+        List<String> history = account.getTransactionHistory();
+        assertEquals(1, history.size(), "Transaction history should have one entry from constructor");
+        assertEquals("Initial deposit: $1000.0", history.get(0), "Transaction history should contain the initial deposit message");
+    }
+
+    @Test
+    public void testSetTransactionHistory() {
+        List<String> newHistory = List.of("Deposited $500", "Withdrew $200");
+        account.setTransactionHistory(newHistory);
+        assertEquals(newHistory, account.getTransactionHistory(), "Transaction history should be updated to the new list");
+    }
+
+    @Test
+    public void testAddTransaction() {
+        account.addTransaction("Deposited $500");
+        List<String> history = account.getTransactionHistory();
+        assertEquals(2, history.size(), "Transaction history should have two entries");
+        assertTrue(history.contains("Deposited $500"), "Transaction history should contain the added transaction detail");
+    }
+
+    @Test
+    public void testToString() {
+        String expectedString = "Account [accountId=A001, balance=1000.0]";
+        assertEquals(expectedString, account.toString(), "toString should return the expected string representation");
     }
 }

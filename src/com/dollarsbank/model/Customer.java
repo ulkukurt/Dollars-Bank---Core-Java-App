@@ -8,6 +8,24 @@ public class Customer implements Serializable {
     private String password;
     private Account account;
 
+    // Default constructor
+    public Customer() {}
+
+    // Constructor with username, password, and account
+    public Customer(String username, String password, Account account) {
+        this.username = username;
+        this.password = password;
+        this.account = account;
+    }
+
+    // Constructor with just username and account (useful for the transfer method)
+    public Customer(String username, Account account) {
+        this.username = username;
+        this.account = account;
+    }
+
+    // ... (The rest of your getters, setters, and methods remain unchanged)
+
     public String getUsername() {
         return username;
     }

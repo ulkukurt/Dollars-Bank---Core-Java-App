@@ -6,9 +6,9 @@ import com.dollarsbank.model.Customer;
 
 public class FileStorageUtility {
 
-    public static void writeToFile(List<Customer> customers) {
+    public static void writeToFile(List<Customer> customers, String filename) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("customers.txt");
+            FileOutputStream fileOutputStream = new FileOutputStream(filename);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(customers);
             objectOutputStream.close();
@@ -19,10 +19,10 @@ public class FileStorageUtility {
     }
 
     @SuppressWarnings("unchecked")
-    public static List<Customer> readFromFile() {
+    public static List<Customer> readFromFile(String filename) {
         List<Customer> customers = null;
         try {
-            FileInputStream fileInputStream = new FileInputStream("customers.txt");
+            FileInputStream fileInputStream = new FileInputStream(filename);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             customers = (List<Customer>) objectInputStream.readObject();
             objectInputStream.close();
@@ -33,4 +33,3 @@ public class FileStorageUtility {
         return customers;
     }
 }
-
